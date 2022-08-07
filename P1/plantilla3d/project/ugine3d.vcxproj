@@ -77,7 +77,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>../lib/glew</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../lib/glew;../lib/glm</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>GLEW_STATIC;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
@@ -139,10 +139,16 @@
     <ClInclude Include="..\lib\glew\GL\glew.h" />
     <ClInclude Include="..\lib\glfw\glfw3.h" />
     <ClInclude Include="..\lib\glfw\glfw3native.h" />
+    <ClInclude Include="..\src\Buffer.h" />
+    <ClInclude Include="..\src\Shader.h" />
+    <ClInclude Include="..\src\Vertex.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\lib\glew\glew.c" />
+    <ClCompile Include="..\src\Buffer.cpp" />
     <ClCompile Include="..\src\main.cpp" />
+    <ClCompile Include="..\src\Shader.cpp" />
+    <ClCompile Include="..\src\Vertex.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\data\fragment.glsl" />

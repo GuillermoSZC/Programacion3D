@@ -22,6 +22,15 @@
     <Filter Include="Shaders">
       <UniqueIdentifier>{0628083b-a31c-4825-822c-11b6f933e7bd}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Vertex">
+      <UniqueIdentifier>{698d3789-4950-4f1d-be73-d4ad5bd0d056}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Shader">
+      <UniqueIdentifier>{5bd00264-177c-49e1-8f05-28923a9311ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Buffer">
+      <UniqueIdentifier>{93232f97-5610-4286-b5cd-c17fda758668}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\lib\glfw\glfw3.h">
@@ -33,6 +42,15 @@
     <ClInclude Include="..\lib\glew\GL\glew.h">
       <Filter>glew</Filter>
     </ClInclude>
+    <ClInclude Include="..\src\Vertex.h">
+      <Filter>Source Files\Vertex</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Buffer.h">
+      <Filter>Source Files\Buffer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Shader.h">
+      <Filter>Source Files\Shader</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\main.cpp">
@@ -40,6 +58,15 @@
     </ClCompile>
     <ClCompile Include="..\lib\glew\glew.c">
       <Filter>glew</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Vertex.cpp">
+      <Filter>Source Files\Vertex</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Buffer.cpp">
+      <Filter>Source Files\Buffer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Shader.cpp">
+      <Filter>Source Files\Shader</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
