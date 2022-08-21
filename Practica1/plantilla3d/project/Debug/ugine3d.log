@@ -1,0 +1,9 @@
+﻿  glew.c
+  Buffer.cpp
+C:\Users\Soker\Documents\GitHub\Programacion3D\Practica1\plantilla3d\src\Buffer.cpp(21,18): warning C4834: discarding return value of function with 'nodiscard' attribute
+  main.cpp
+  Shader.cpp
+  Vertex.cpp
+  Generating Code...
+LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+  ugine3d.vcxproj -> C:\Users\Soker\Documents\GitHub\Programacion3D\Practica1\plantilla3d\project\Debug\Practica3D.exe

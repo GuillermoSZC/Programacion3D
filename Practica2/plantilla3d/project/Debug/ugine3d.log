@@ -1,0 +1,24 @@
+﻿  main.cpp
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility(149,77): warning C4244: 'argument': conversion from '_Ty' to 'float', possible loss of data
+          with
+          [
+              _Ty=int
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(2006): message : see reference to function template instantiation 'void std::_Construct_in_place<_Ty,int,int>(_Ty &,int &&,int &&) noexcept(false)' being compiled
+          with
+          [
+              _Ty=Camera
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(2725): message : see reference to function template instantiation 'std::_Ref_count_obj2<_Ty>::_Ref_count_obj2<int,int>(int &&,int &&)' being compiled
+          with
+          [
+              _Ty=Camera
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(2726): message : see reference to function template instantiation 'std::_Ref_count_obj2<_Ty>::_Ref_count_obj2<int,int>(int &&,int &&)' being compiled
+          with
+          [
+              _Ty=Camera
+          ]
+C:\Users\Soker\Documents\GitHub\Programacion3D\Practica2\plantilla3d\src\main.cpp(52): message : see reference to function template instantiation 'std::shared_ptr<Camera> std::make_shared<Camera,int,int>(int &&,int &&)' being compiled
+LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+  ugine3d.vcxproj -> C:\Users\Soker\Documents\GitHub\Programacion3D\Practica2\plantilla3d\project\Debug\Practica3D.exe
