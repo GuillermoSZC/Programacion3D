@@ -1,0 +1,7 @@
+C:\Users\usuario\Desktop\3D\Practicas\Practica 1\Practica 1\plantilla3d\project\Debug\Practica3D.exe
+C:\Users\usuario\Desktop\3D\Practicas\Practica 2\plantilla3d\project\Debug\Practica3D.exe
+C:\Users\usuario\Desktop\3D\Practicas\Practica 3\plantilla3d\project\Debug\Practica3D.exe
+C:\Users\usuario\Desktop\3D\Practicas\Practica 4\plantilla3d\project\Debug\Practica3D.exe
+C:\Users\Juan\Desktop\3D\Practica 4\plantilla3d\project\Debug\Practica3D.exe
+C:\Users\Soker\Documents\GitHub\Programacion3D\Practica4\plantilla3d\project\Debug\Practica3D.exe
+C:\Users\Soker\Documents\GitHub\Programacion3D\Practica5\plantilla3d\project\Debug\Practica3D.exe
