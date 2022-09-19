@@ -4,6 +4,7 @@
 class Vertex
 {
 public:
+   Vertex() = default;
    Vertex(glm::vec3 _pos, glm::vec3 _color, glm::vec2 _textureCoord, glm::vec3 _normal = glm::vec3(0.f, 0.f, 0.f));
 
 public:

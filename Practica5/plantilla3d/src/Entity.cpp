@@ -39,7 +39,7 @@ void Entity::SetScale(const glm::vec3& _scale)
 
 void Entity::Move(const glm::vec3& _vec)
 {
-
+   vPosition += _vec;
 }
 
 void Entity::Update(float _deltaTime)

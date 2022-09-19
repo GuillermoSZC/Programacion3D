@@ -84,40 +84,40 @@ void Material::SetShininess(uint8_t _shininess)
 
 void Material::Prepare()
 {
-   GetShader();
-   shader->Use();
+   std::shared_ptr<Shader> auxShader = GetShader();
+   auxShader->Use();
 
    if (texture)
    {
       texture->Bind();
    }
    
-   shader->SetMatrix(shader->GetLocation("mvp"), State::GetState()->projectionMatrix * State::GetState()->viewMatrix * State::GetState()->modelMatrix);
+   auxShader->SetMatrix(auxShader->GetLocation("mvp"), State::GetState()->projectionMatrix * State::GetState()->viewMatrix * State::GetState()->modelMatrix);
 
-   shader->SetInt(shader->GetLocation("texSampler"), 0);
+   auxShader->SetInt(auxShader->GetLocation("texSampler"), 0);
 
    glm::mat4 mv = State::GetState()->viewMatrix * State::GetState()->modelMatrix;
-   shader->SetMatrix(shader->GetLocation("mv"), mv);
+   auxShader->SetMatrix(auxShader->GetLocation("mv"), mv);
 
    glm::mat4 normalMatrix = glm::inverse(mv);
    normalMatrix = glm::transpose(normalMatrix);
-   shader->SetMatrix(shader->GetLocation("nmatrix"), normalMatrix);
+   auxShader->SetMatrix(auxShader->GetLocation("nmatrix"), normalMatrix);
 
-   shader->SetInt(shader->GetLocation("numLights"), State::GetState()->lights.size());
+   auxShader->SetInt(auxShader->GetLocation("numLights"), State::GetState()->lights.size());
 
    int i = 0;
    for (auto& iterator : State::GetState()->lights)
    {
-      iterator->Prepare(i, shader);
+      iterator->Prepare(i, auxShader);
       i++;
    }
 
-   shader->SetInt(shader->GetLocation("_numLights"), State::GetState()->lights.size());
+   auxShader->SetInt(auxShader->GetLocation("_numLights"), State::GetState()->lights.size());
 
-   shader->SetVec3(shader->GetLocation("_globalAmbient"), State::GetState()->ambient);
+   auxShader->SetVec3(auxShader->GetLocation("_globalAmbient"), State::GetState()->ambient);
 
-   shader->SetVec4(shader->GetLocation("mat.ambient"), glm::vec4(color));
-   shader->SetVec4(shader->GetLocation("mat.diffuse"), glm::vec4(color));
-   shader->SetVec3(shader->GetLocation("mat.specular"), glm::vec3(color));
-   shader->SetFloat(shader->GetLocation("mat.shininess"), shininess);
+   auxShader->SetVec4(auxShader->GetLocation("mat.ambient"), glm::vec4(color));
+   auxShader->SetVec4(auxShader->GetLocation("mat.diffuse"), glm::vec4(color));
+   auxShader->SetVec3(auxShader->GetLocation("mat.specular"), glm::vec3(color));
+   auxShader->SetFloat(auxShader->GetLocation("mat.shininess"), shininess);
 }

@@ -13,12 +13,11 @@ public:
 
 
 protected:
-
-
-private:
    glm::vec3 vPosition;
    glm::vec3 vRotation;
    glm::vec3 vScale;
+
+private:
 
 public:
    const glm::vec3& GetPosition() const;

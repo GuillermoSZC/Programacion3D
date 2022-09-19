@@ -1,6 +1,7 @@
 #include "Light.h"
 
-Light::Light() : lightMode(LightTypes::DirectionalLight), color(0.f, 0.f, 0.f, 0.f)
+Light::Light() : 
+   lightMode(LightTypes::DirectionalLight), color(0.f, 0.f, 0.f, 0.f), linearAttenuation(0.f)
 {
 
 }
@@ -59,7 +60,7 @@ void Light::Prepare(int _index, std::shared_ptr<Shader> _shader) const
    _shader->SetVec4(specularLocation, color);
 
    int positionLocation = _shader->GetLocation((light + index + position).c_str());
-   _shader->SetVec4(positionLocation, color);
+   _shader->SetVec3(positionLocation, vPosition);
 
    int auxType;
    if (lightMode == LightTypes::PointLight)

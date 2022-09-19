@@ -9,7 +9,7 @@ InputManager* InputManager::GetState()
 
 void InputManager::UpdateCameraPosition(GLFWwindow*& _window, std::shared_ptr<Camera>& _camera, float _deltaTime)
 {
-   float speed = 10.f * _deltaTime;
+   float speed = 100.f * _deltaTime;
 
    if (glfwGetKey(_window, GLFW_KEY_W))
    {

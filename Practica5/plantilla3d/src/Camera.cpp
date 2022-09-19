@@ -39,12 +39,12 @@ void Camera::SetClearColor(const glm::vec3& _color)
 
 void Camera::Prepare()
 {
-   State::GetState()->projectionMatrix = projection;
-   State::GetState()->viewMatrix = glm::lookAt(GetPosition(), GetPosition() + updateFront, updateUp);
-
    glViewport(viewport.x, viewport.y, width, height);
    glScissor(viewport.x, viewport.y, width, height);
 
    glClearColor(color.x, color.y, color.z, 1.f);
    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+   State::GetState()->viewMatrix = glm::lookAt(GetPosition(), GetPosition() + updateFront, updateUp);
+   State::GetState()->projectionMatrix = projection;
 }

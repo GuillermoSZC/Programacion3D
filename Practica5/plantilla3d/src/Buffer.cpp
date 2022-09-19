@@ -41,19 +41,18 @@ Material& Buffer::GetMaterial()
    return material;
 }
 
-void Buffer::Draw() const
+void Buffer::Draw(const std::shared_ptr<Shader>& _shader) const
 {
-   // ************************** MVP matrix calculation *********************************
+
    int locationAux;
    glm::mat4 MVP = State::GetState()->projectionMatrix * State::GetState()->viewMatrix * State::GetState()->modelMatrix;
 
    locationAux = material.GetShader()->GetLocation("mvp");
-   // shader->SetMatrix(locationAux, MVP);
-   material.GetShader()->SetMatrix(locationAux, MVP);
+   _shader->SetMatrix(locationAux, MVP);
 
    glBindBuffer(GL_ARRAY_BUFFER, idArray[0]);
    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, idArray[1]);
 
-   material.GetShader()->SetupAttribs();
+   _shader->SetupAttribs();
    glDrawElements(GL_TRIANGLES, indexes.size(), GL_UNSIGNED_SHORT, nullptr);
 }

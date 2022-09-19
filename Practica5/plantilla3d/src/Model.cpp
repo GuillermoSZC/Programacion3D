@@ -19,5 +19,5 @@ void Model::Draw()
 
 void Model::Update(float _deltaTime)
 {
-   rotation += _deltaTime;
+   // rotation += _deltaTime;
 }

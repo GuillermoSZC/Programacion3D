@@ -36,7 +36,7 @@ public:
    std::shared_ptr<Shader> GetShader();
    Material& GetMaterial();
 
-   void Draw() const;
+   void Draw(const std::shared_ptr<Shader>& _shader) const;
 
 protected:
 

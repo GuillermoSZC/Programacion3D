@@ -5,6 +5,7 @@
 std::shared_ptr<Texture> Texture::Load(const char* _fileName)
 {
    std::shared_ptr<Texture> auxTex = std::make_shared<Texture>();
+   stbi_set_flip_vertically_on_load(true);
    unsigned char* buffer = stbi_load(_fileName, &auxTex->width, &auxTex->height, nullptr, 4);
 
    if (buffer)
